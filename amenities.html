@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amenities — Snow White Villa | Malavli, Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Snow White <span>Villa</span></a>
+  <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="amenities.html" class="active">Amenities</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://airbnb.com/h/snowwhitevilla07" target="_blank" class="nav-airbnb">🏠 Airbnb</a></li>
+    <li><a href="contact.html" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" id="heroBg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">Snow White Villa</div>
+    <h1 class="page-hero-title">Amenities</h1>
+    <p class="page-hero-sub">Everything for a perfect stay — comfort, fun, and relaxation.</p>
+  </div>
+</div>
+
+<!-- AMENITIES TABS -->
+<div class="section">
+  <div class="fade-up">
+    <div class="sec-label">Amenities</div>
+    <h2>Everything for a Perfect Stay</h2>
+    <p class="lead">Thoughtfully curated for comfort, fun, and relaxation.</p>
+  </div>
+  <div class="fade-up" style="margin-top:2rem">
+    <div class="amenities-tabs">
+      <button class="atab active" onclick="switchTab(event,'rooms')">Rooms & Space</button>
+      <button class="atab" onclick="switchTab(event,'pool')">Pool & Outdoors</button>
+      <button class="atab" onclick="switchTab(event,'entertainment')">Entertainment</button>
+      <button class="atab" onclick="switchTab(event,'kitchen')">Kitchen</button>
+      <button class="atab" onclick="switchTab(event,'games')">Games</button>
+    </div>
+    <div id="tab-rooms" class="atab-panel active">
+      <div class="amenity-card"><div class="ac-icon">🛏️</div><div><div class="ac-title">4 AC Bedrooms</div><div class="ac-desc">All air-conditioned with 2 private balconies</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🛋️</div><div><div class="ac-title">Spacious Hall</div><div class="ac-desc">Large living area perfect for group gatherings</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🚿</div><div><div class="ac-title">5 Bathrooms</div><div class="ac-desc">All equipped with geysers for hot water</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🛌</div><div><div class="ac-title">Extra Mattresses</div><div class="ac-desc">Available for additional guests (up to 3 extra)</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🌅</div><div><div class="ac-title">2 Balconies</div><div class="ac-desc">Panoramic mountain and nature views</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">👨</div><div><div class="ac-title">Caretaker 24×7</div><div class="ac-desc">On-site caretaker available round the clock</div></div></div>
+    </div>
+    <div id="tab-pool" class="atab-panel">
+      <div class="amenity-card"><div class="ac-icon">🏊‍♂️</div><div><div class="ac-title">Private Pool</div><div class="ac-desc">30×12 ft, 4.5 ft depth with LED lighting</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">💦</div><div><div class="ac-title">Waterfall Feature</div><div class="ac-desc">Decorative stone waterfall into the pool</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🪑</div><div><div class="ac-title">Poolside Lounge</div><div class="ac-desc">Wicker chairs and outdoor seating by the pool</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🏔️</div><div><div class="ac-title">Mountain-View Balcony</div><div class="ac-desc">Breathtaking Sahyadri views from upper floor</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🌿</div><div><div class="ac-title">Landscaped Courtyard</div><div class="ac-desc">Green plants and outdoor lighting throughout</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🚗</div><div><div class="ac-title">Private Parking</div><div class="ac-desc">Spacious private parking available</div></div></div>
+    </div>
+    <div id="tab-entertainment" class="atab-panel">
+      <div class="amenity-card"><div class="ac-icon">📺</div><div><div class="ac-title">55" Smart LED TV</div><div class="ac-desc">Large smart television for movies and streaming</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">📶</div><div><div class="ac-title">Free Wi-Fi</div><div class="ac-desc">High-speed internet throughout the villa</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🔊</div><div><div class="ac-title">Bluetooth Speaker</div><div class="ac-desc">Portable speaker for music by the pool</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🎱</div><div><div class="ac-title">Billiards Table</div><div class="ac-desc">Full-size pool table in the game room</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">⚽</div><div><div class="ac-title">Foosball Table</div><div class="ac-desc">Table football on the terrace</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🏸</div><div><div class="ac-title">Badminton</div><div class="ac-desc">Rackets and shuttlecock available</div></div></div>
+    </div>
+    <div id="tab-kitchen" class="atab-panel">
+      <div class="amenity-card"><div class="ac-icon">🍳</div><div><div class="ac-title">Modular Kitchen</div><div class="ac-desc">L-shaped fully equipped modular kitchen</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">❄️</div><div><div class="ac-title">Refrigerator</div><div class="ac-desc">Full-size fridge for food and beverages</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">💧</div><div><div class="ac-title">Water Purifier</div><div class="ac-desc">RO water purifier for safe drinking water</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">☕</div><div><div class="ac-title">Electric Kettle</div><div class="ac-desc">Available in each bedroom</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">📦</div><div><div class="ac-title">Microwave</div><div class="ac-desc">For reheating and quick cooking</div></div></div>
+      <div class="amenity-card" style="border-color:var(--blue-mid);background:var(--blue-pale)"><div class="ac-icon">👨‍🍳</div><div><div class="ac-title">Cook on Request</div><div class="ac-desc">Available on request at extra charge</div></div></div>
+    </div>
+    <div id="tab-games" class="atab-panel">
+      <div class="amenity-card"><div class="ac-icon">🎯</div><div><div class="ac-title">Carrom</div><div class="ac-desc">Classic board game for all ages</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">♟️</div><div><div class="ac-title">Chess</div><div class="ac-desc">Strategy game for two players</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🃏</div><div><div class="ac-title">Cards</div><div class="ac-desc">Playing cards for group games</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🎲</div><div><div class="ac-title">Ludo</div><div class="ac-desc">Family favourite board game</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🟦</div><div><div class="ac-title">Uno</div><div class="ac-desc">Fast-paced card game for groups</div></div></div>
+      <div class="amenity-card"><div class="ac-icon">🏸</div><div><div class="ac-title">Badminton</div><div class="ac-desc">Outdoor racket sport equipment included</div></div></div>
+      <div class="amenity-card" style="border-color:var(--blue-mid);background:var(--blue-pale)"><div class="ac-icon">🎈</div><div><div class="ac-title">Decoration Services</div><div class="ac-desc">Available on request for birthdays & celebrations</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CROSS LINKS -->
+<div class="section-bg-light">
+  <div class="section">
+    <div class="fade-up">
+      <div class="sec-label">Explore More</div>
+      <h2>Continue Browsing</h2>
+    </div>
+    <div class="page-links fade-up">
+      <a href="gallery.html" class="page-link-card">
+        <div class="plc-label">Explore</div>
+        <div class="plc-title">Photo Gallery</div>
+        <span class="plc-arrow">View all photos →</span>
+      </a>
+      <a href="pricing.html" class="page-link-card">
+        <div class="plc-label">Plan</div>
+        <div class="plc-title">Pricing &amp; Availability</div>
+        <span class="plc-arrow">Check dates &amp; rates →</span>
+      </a>
+      <a href="contact.html" class="page-link-card">
+        <div class="plc-label">Connect</div>
+        <div class="plc-title">Contact &amp; Booking</div>
+        <span class="plc-arrow">Reach out now →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Snow White Villa</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="amenities.html">Amenities</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div>© 2025 Ganesh Ikale. All rights reserved.</div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919370721397?text=Hi%2C%20I%20would%20like%20to%20book%20Snow%20White%20Villa." target="_blank" class="wa-float" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="images.js"></script>
+<script>
+document.getElementById('heroBg').style.backgroundImage = `url(${IMGS[4].src})`;
+</script>
+<script src="common.js"></script>
+</body>
+</html>

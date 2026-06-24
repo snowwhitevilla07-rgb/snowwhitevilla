@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery — Snow White Villa | Malavli, Pune</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">Snow White <span>Villa</span></a>
+  <button class="nav-toggle" onclick="toggleNav()">☰</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="amenities.html">Amenities</a></li>
+    <li><a href="pricing.html">Pricing</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="https://airbnb.com/h/snowwhitevilla07" target="_blank" class="nav-airbnb">🏠 Airbnb</a></li>
+    <li><a href="contact.html" class="nav-book">Book Now</a></li>
+  </ul>
+</nav>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="page-hero-bg" id="heroBg"></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">Snow White Villa</div>
+    <h1 class="page-hero-title">Photo Gallery</h1>
+    <p class="page-hero-sub">Every room, every corner — crafted to impress.</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+  <div class="fade-up">
+    <div class="sec-label">Browse by Category</div>
+    <h2>Step Inside the Experience</h2>
+  </div>
+  <div class="gallery-filters fade-up">
+    <button class="gfilter active" onclick="filterGallery(event,'all')">All Photos</button>
+    <button class="gfilter" onclick="filterGallery(event,'exterior')">Exterior &amp; Pool</button>
+    <button class="gfilter" onclick="filterGallery(event,'bedrooms')">Bedrooms</button>
+    <button class="gfilter" onclick="filterGallery(event,'living')">Living &amp; Kitchen</button>
+    <button class="gfilter" onclick="filterGallery(event,'bathrooms')">Bathrooms</button>
+    <button class="gfilter" onclick="filterGallery(event,'games')">Games &amp; Outdoors</button>
+  </div>
+  <div class="gallery-mosaic fade-up" id="galleryGrid"></div>
+</div>
+
+<!-- CROSS LINKS -->
+<div class="section-bg-light">
+  <div class="section">
+    <div class="fade-up">
+      <div class="sec-label">Explore More</div>
+      <h2>Continue Browsing</h2>
+    </div>
+    <div class="page-links fade-up">
+      <a href="amenities.html" class="page-link-card">
+        <div class="plc-label">Discover</div>
+        <div class="plc-title">Amenities</div>
+        <span class="plc-arrow">See what's included →</span>
+      </a>
+      <a href="pricing.html" class="page-link-card">
+        <div class="plc-label">Plan</div>
+        <div class="plc-title">Pricing &amp; Availability</div>
+        <span class="plc-arrow">Check dates &amp; rates →</span>
+      </a>
+      <a href="contact.html" class="page-link-card">
+        <div class="plc-label">Connect</div>
+        <div class="plc-title">Contact &amp; Booking</div>
+        <span class="plc-arrow">Reach out now →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Snow White Villa</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="amenities.html">Amenities</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <div>© 2025 Ganesh Ikale. All rights reserved.</div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLB()">✕</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
+  <div class="lb-caption" id="lbCaption"></div>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919370721397?text=Hi%2C%20I%20would%20like%20to%20book%20Snow%20White%20Villa." target="_blank" class="wa-float" title="WhatsApp Us">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="images.js"></script>
+<script>
+const CATEGORIES = [
+  'exterior','bedrooms','bedrooms','exterior','living','living','bedrooms','exterior',
+  'living','bathrooms','bathrooms','living','bedrooms','exterior','bedrooms','games',
+  'exterior','games'
+];
+
+document.getElementById('heroBg').style.backgroundImage = `url(${IMGS[0].src})`;
+
+const grid = document.getElementById('galleryGrid');
+IMGS.forEach((img, i) => {
+  const d = document.createElement('div');
+  d.className = 'gm';
+  d.dataset.cat = CATEGORIES[i];
+  d.innerHTML = `<img src="${img.src}" alt="${img.label}" loading="lazy"><div class="gm-overlay"></div><div class="gm-label">${img.label}</div>`;
+  d.onclick = () => openLB(i);
+  grid.appendChild(d);
+});
+</script>
+<script src="common.js"></script>
+</body>
+</html>
